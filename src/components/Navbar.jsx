@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from "react-redux";
-import '../style/nav.css';
+import '../style/style.css';
 
 
 const Navbar = () => {
@@ -19,32 +19,32 @@ const Navbar = () => {
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0 ">
               
               <li className="nav-item">
-                <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
+                <NavLink className="nav-link active" aria-current="page" to="/">首頁</NavLink>
               </li>
 
               <li className="nav-item">
-                <NavLink className="nav-link" to="/products">Products</NavLink>
+                <NavLink className="nav-link" to="/products">推薦課程</NavLink>
               </li>
               
               <li className="nav-item">
-                <NavLink className="nav-link" to="/about">About</NavLink>
+                <NavLink className="nav-link" to="/myticket">我的票券</NavLink>
               </li>
               
               <li className="nav-item">
-                <NavLink className="nav-link" to="/contact">Contact</NavLink>
+                <NavLink className="nav-link" to="/trainMySelf">訓練清單</NavLink>
               </li>
             
               
             </ul>
             <div className="button d-flex navForRWD ">
               <NavLink to="/login" className='btn btn-outline-dark m-2'>
-                Login
+                登入
               </NavLink>
               <NavLink to="/register" className='btn btn-outline-dark m-2'>
-                Register
+                註冊
               </NavLink>
               <NavLink to="/cart" className='btn btn-outline-dark m-2'>
-               category
+               購物車
                {/* category({state.length}) */}
                
               </NavLink>
