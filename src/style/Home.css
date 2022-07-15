@@ -1,0 +1,29 @@
+
+.Carouselteacherwidth{
+  width: 25em;
+}
+
+@media screen and (max-width: 960px) {
+  .Carouselteacherwidth{
+    width: 15em;
+  }
+}
+
+.videoWidth{
+  width: 600px;
+}
+@media screen and (max-width: 960px) {
+  .videoWidth{
+    width: 500px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .videoWidth{
+    width: 300px;
+  }
+}
+
+.cardWidth{
+  width: 23em;
+  min-width: 12em;
+}

@@ -5,6 +5,7 @@ import Products from "./components/products/Products";
 import Product from "./components/products/Product";
 import MyTicket from "./components/myticket/MyTicket";
 import TrainList from "./components/trainList/TrainList";
+import Regieter from "./components/member/Register";
 
 
 
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/products" element={ <Products /> } />
           <Route exact path="/products/:id" element={ <Product /> } />
           <Route exact path="/trainMySelf" element={ <TrainList /> } />
+          <Route exact path="/register" element={ <Regieter /> } />
       </Routes>
     </>
   );

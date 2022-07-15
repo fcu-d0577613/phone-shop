@@ -5,6 +5,18 @@
   }
 }
 
+body{
+  margin: 0;
+}
+
 .MyTicket_img1{
   width: 100%;
+}
+
+.sbtn{
+  background-color: rgb(67, 180, 172);
+  border-radius: 5px;
+  height: 0.5em;
+  color: aliceblue;
+  
 }

@@ -4,12 +4,13 @@ import News from '../home/News'
 import Footer from '../Footer'
 import Video from '../home/Video'
 import Teacher from '../home/Teacher'
+import "../../style/style.css"
 
 const Home = () => {
   return (
     <div className='hero'>
       <div className="card bg-dark text-white border-0">
-        <img src="/images/FCU_GYM.png" className="card-img" alt="..." height="550px"/>
+        <img src="/images/FCU_GYM.png" className="card-img" alt="..." />
         <div className="card-img-overlay">
           <div className="container">
 

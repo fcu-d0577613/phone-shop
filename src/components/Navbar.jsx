@@ -1,61 +1,162 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { useSelector } from "react-redux";
-import '../style/style.css';
+import React, { useState, useEffect } from 'react';
+import { Button } from './Button';
+import { Link } from 'react-router-dom';
+import '../style/Navbar.css';
+import { useNavigate } from "react-router-dom";
+// import AuthService from "../services/auth.service";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimes,faBars } from '@fortawesome/free-solid-svg-icons'
+import {Card, Container, Row, Col, Carousel }from 'react-bootstrap';
+
+import "../style/style.css"
 
 
-const Navbar = () => {
-  const state = useSelector( (state) => state.cart);
+
+function Navbar(props) {
+  let {currentUser, setCurrentUser} =props;
+  const navigate = useNavigate();
+  
+  const [click, setClick] = useState(false);
+  const [button, setButton] = useState(true);
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
+
+  
+
+  const handleLogout = () => {
+    // AuthService.logout();
+    window.alert("Logout Successfully, now you are redirect to the homepage.");
+    setCurrentUser(null);
+    navigate("/");
+  }
+
+  useEffect(() => {
+    showButton();
+  }, []);
+
+  window.addEventListener('resize', showButton);
+
   return (
-
-    <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light py-1 shadow-sm">
-        <div className="container">
-          <NavLink className="navbar-brand fw-bold fs-4" to="/">SHAWNGYM</NavLink>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse d-flex justify-center navForRWD"     id="navbarSupportedContent">
-            <ul className="navbar-nav mx-auto mb-2 mb-lg-0 ">
-              
-              <li className="nav-item">
-                <NavLink className="nav-link active" aria-current="page" to="/">首頁</NavLink>
-              </li>
-
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/products">推薦課程</NavLink>
-              </li>
-              
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/myticket">我的票券</NavLink>
-              </li>
-              
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/trainMySelf">訓練清單</NavLink>
-              </li>
-            
-              
-            </ul>
-            <div className="button d-flex navForRWD ">
-              <NavLink to="/login" className='btn btn-outline-dark m-2'>
-                登入
-              </NavLink>
-              <NavLink to="/register" className='btn btn-outline-dark m-2'>
-                註冊
-              </NavLink>
-              <NavLink to="/cart" className='btn btn-outline-dark m-2'>
-               購物車
-               {/* category({state.length}) */}
-               
-              </NavLink>
-            </div>
-
+    
+      <nav className='navbar p-0'>
+        <div className='navbar-container '>
+          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+            JIMGYM
+          </Link>
+          <div className='menu-icon' onClick={handleClick}>
+          <FontAwesomeIcon className='text-light' icon={click ? faTimes : faBars} />
           </div>
+
+
+          <ul className={click ? 'nav-menu active d-flex justify-content-center' : 'nav-menu  '}>
+
+            <li className='nav-item'>
+              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                首頁
+              </Link>
+            </li>
+
+            <li className='nav-item'>
+              <Link
+                to='/news'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                最新消息
+              </Link>
+            </li>
+
+            <li className='nav-item'>
+              <Link
+                to='/gymTable'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                健身房
+              </Link>
+            </li>
+            
+            <li className='nav-item'>
+              <Link
+                to='/abericTable'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                有氧課表
+              </Link>
+            </li>
+            
+            {currentUser && (<li className='nav-item'>
+              <Link
+                to='/myTicket'
+                className='nav-links'
+                onClick={closeMobileMenu}
+                
+              >
+                我的票券
+              </Link>
+            </li>)}  
+
+
+
+
+            {/* <li className='nav-item navbtnswidth m-0 mt-2 p-0'> */}
+          
+
+              <li className='nav-links p-0 my-0 me-1'>
+                <Link
+                  to='/login'
+                  className='nav-links sbtn text-light '
+                  onClick={closeMobileMenu}
+                >
+                  註冊
+                </Link>
+              </li>  
+
+              <li className='nav-links p-0 my-0 me-1'>
+                <Link
+                  to='/login'
+                  className='nav-links sbtn text-light '
+                  onClick={closeMobileMenu}
+                >
+                  註冊
+                </Link>
+              </li> 
+
+
+            {currentUser && (<li className='nav-item'>
+              <Link
+                to='/'
+                className='nav-links'
+                // onClick={closeMobileMenu, handleLogout}
+                
+              >
+                登出
+              </Link>
+            </li>)}
+          {/* </li> */}
+
+
+
+
+          </ul>
+
+          
+
+          
+
+          
         </div>
       </nav>
-    </div>
-
-  )
+    
+  );
 }
 
-export default Navbar
+export default Navbar;
