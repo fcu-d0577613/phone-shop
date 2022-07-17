@@ -27,3 +27,15 @@
   width: 23em;
   min-width: 12em;
 }
+
+.productIMGONLY{
+  width: 400px;
+}
+
+@media screen and (max-width: 600px) {
+  .productIMGONLY{
+    width: 250px;
+    margin: 0;
+    padding: 0;
+  }
+}

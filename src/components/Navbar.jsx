@@ -65,35 +65,45 @@ function Navbar(props) {
 
             <li className='nav-item'>
               <Link
-                to='/news'
+                to='/products'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                最新消息
+                好物推薦
               </Link>
             </li>
 
             <li className='nav-item'>
               <Link
-                to='/gymTable'
+                to='/myclass'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                健身房
+                推薦課程
               </Link>
             </li>
             
             <li className='nav-item'>
               <Link
-                to='/abericTable'
+                to='/trainMySelf'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                有氧課表
+                訓練清單
+              </Link>
+            </li>
+
+            <li className='nav-item'>
+              <Link
+                to='/myticket'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                我的票券
               </Link>
             </li>
             
-            {currentUser && (<li className='nav-item'>
+            {/* {currentUser && (<li className='nav-item'>
               <Link
                 to='/myTicket'
                 className='nav-links'
@@ -102,17 +112,16 @@ function Navbar(props) {
               >
                 我的票券
               </Link>
-            </li>)}  
+            </li>)}   */}
 
 
 
 
-            {/* <li className='nav-item navbtnswidth m-0 mt-2 p-0'> */}
           
 
               <li className='nav-links p-0 my-0 me-1'>
                 <Link
-                  to='/login'
+                  to='/register'
                   className='nav-links sbtn text-light '
                   onClick={closeMobileMenu}
                 >
@@ -126,7 +135,7 @@ function Navbar(props) {
                   className='nav-links sbtn text-light '
                   onClick={closeMobileMenu}
                 >
-                  註冊
+                  登入
                 </Link>
               </li> 
 
@@ -141,7 +150,6 @@ function Navbar(props) {
                 登出
               </Link>
             </li>)}
-          {/* </li> */}
 
 
 

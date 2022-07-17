@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { NavLink } from 'react-router-dom';
+import "../../style/style.css";
+
 
 const Products = () => {
 
@@ -30,6 +32,8 @@ const Products = () => {
   },[])
 
 
+
+  //loading
   const Loading = () => {
     return(
 
@@ -37,6 +41,7 @@ const Products = () => {
     )
   }
 
+  // filterProduct
   const filterProduct = (findWhat) =>{
     const updateDate = data.filter( (x) => x.category == findWhat);
     setFilter(updateDate);
@@ -46,18 +51,20 @@ const Products = () => {
   const ShowProducts = () => {
     return(
       <>
-        <div className="buttons d-flex justify-content-center mb-5 pb-5">
-          <button className='btn btn-outline-dark me-2' 
+        {/* filter button */}
+        <div className="buttons d-flex justify-content-center flex-wrap mb-5 pb-5 text-light">
+          <button className='btn btn-outline-dark me-2 text-light border-light' 
           onClick={()=>setFilter(data)}>ALL</button>
-          <button className='btn btn-outline-dark me-2' 
+          <button className='btn btn-outline-dark me-2 text-light border-light' 
           onClick={()=>filterProduct("men's clothing")}>Men's Clothing</button>
-          <button className='btn btn-outline-dark me-2' 
+          <button className='btn btn-outline-dark me-2 text-light border-light' 
           onClick={()=>filterProduct("women's clothing")}>Women's Clothing</button>
-          <button className='btn btn-outline-dark me-2'
+          <button className='btn btn-outline-dark me-2 text-light border-light'
           onClick={()=>filterProduct("jewelery")}>Jewelery's Clothing</button>
-          <button className='btn btn-outline-dark me-2'
+          <button className='btn btn-outline-dark me-2 text-light border-light'
           onClick={()=>filterProduct("electronics")}>Electric's Clothing</button>
         </div>
+
         {filter.map((products) => {
           return(
             <>
@@ -81,15 +88,16 @@ const Products = () => {
 
 
   return (
-    <div>
-      <div className="container my-5 py-5">
+    <div className='mainBG'>
+      <div className="container py-5 py-5">
         <div className="row">
           <div className="col-12 mb-5">
-            <h1 className='display-6 fw-bolder text-center'>Lastest Products</h1>
-            <hr />
+            <h1 className='display-6 fw-bolder text-center text-light'>Lastest Products</h1>
+              <hr className='text-light border-top-light bg-light' />
+            
           </div>
         </div>
-        <div className="row justify-content-center">
+        <div className="row justify-content-center ">
           { loading? <Loading />: <ShowProducts />}
         </div>
       </div>

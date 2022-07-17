@@ -3,26 +3,30 @@ import { useSelector } from 'react-redux';
 import { Container, Card, Button, Row, Col } from 'react-bootstrap';
 import "../../style/style.css";
 import Register from '../member/Register';
+import TodoInput from './TodoInput';
+import TodoList from './TodoList';
+import "../../style/style.css";
+
 
 
 
 const TrainList = () => {
-  const products = useSelector(state => state.products);
-  const users = useSelector(state => state.products);
   
-  console.log(products);
   return (
-    <div>
-      <h1>123</h1>
-      {
-        products?.map(product => <div key={product.id}>{product.name}</div>)
-      }
-      {
-        users?.map(user => <div>{user.name}</div>)
-      }
+    <div className='mainBG text-light TrainListBG fill-window'>
 
-      <Register />
+      <Container  className=' TrainListBG'>
+        <Row className='d-flex justify-content-center pt-5'>
+          <Col s={12} md={6}>
+            <TodoInput />
+            <TodoList />
+          </Col>
+        </Row>
+      </Container>
     </div>
+    
+
+    
     
   )
 }

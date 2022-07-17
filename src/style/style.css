@@ -7,6 +7,7 @@
 
 body{
   margin: 0;
+  height: 100%;
 }
 
 .MyTicket_img1{
@@ -20,3 +21,35 @@ body{
   color: aliceblue;
   
 }
+
+.homeBigImg{
+  position: relative;
+  height: 75vh;
+  object-fit: cover;
+  overflow: hidden;
+  box-shadow: inset 5em 1em gold;
+}
+.mainBG{
+  background-color: rgb(19, 20, 31);
+  /* height: 100vh; */
+
+}
+
+.liBGBar{
+  position: relative;
+  background-color: rgb(19, 20, 31);
+  top: -2em;
+  height: 10vh;
+  background: linear-gradient(rgb(19, 20, 31, 0), rgb(19, 20, 31));
+}
+hr{
+background-color: #fff;
+}
+
+.fill-window {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  }

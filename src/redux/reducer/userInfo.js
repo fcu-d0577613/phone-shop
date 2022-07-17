@@ -1,6 +1,6 @@
 import {createStore}  from "redux";
 
-const initialState = {
+const userinfo = {
   users: [],
   loggedInUser: null,
   products: [{
@@ -27,7 +27,7 @@ const initialState = {
   cart: []
 }
 
-const userInfo = (state = initialState, action) => {
+const userInfo = (state = userinfo, action) => {
   switch(action.type){
 
     case "REGISTER":

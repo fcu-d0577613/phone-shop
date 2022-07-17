@@ -12,7 +12,7 @@ const news = () => {
       <Container className='p-3 '>
         <Row className='text-lg-start text-center '>
           <Col lg={12} xl={6} className='' >
-            <h1 className='fw-bold '>SHAWNSTUDIO</h1>
+            <h1 className='fw-bold pt-md-5'>SHAWNSTUDIO</h1>
             <h5 className='fw-bold mb-md-5'>【聖誕特輯】</h5>
             <p className='fw-bold pt-3'>
                   轉眼間來到2021最後一個月份

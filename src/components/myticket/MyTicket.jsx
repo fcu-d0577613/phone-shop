@@ -1,48 +1,52 @@
 import React, { useState } from 'react';
 import { Container, Card, Button, Row, Col } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
 import "../../style/style.css";
-
+import MyTicketItem from './MyTicketItem';
 
 
 const MyTicket = () => {
-
   const [show, setShow] = useState(false);
+  // const handleClose = () => setShow(false);
+  // const handleShow = () => setShow(true);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  let tickets = useSelector(state => state.TicketList);
+  
+
 
 
   return (
+    <div className='mainBG fill-window'>
 
-    
-    <Container>
-      <Row className="d-flex m-3">
-        <Col xs={6}>
-          <img className=" MyTicket_img1 " src="/images/1月有氧課表.png" alt="" />
-        </Col>
+      <Container>
+        <Row className="d-flex  pt-5 text-lg-start text-center">
+          <Col  lg={12} xl={6} className="text-light">
+              <div className='MyTicket-nitice'>
+                <div className='notice-box'>
+                  <h1>注意事項</h1>
+                  <ul className="notice-item">
+                    <li>為確保上課品質，進入教室請將手機靜音，本館禁止飲食，感謝您的支持與配合。</li>
+                    <li>本館保留變更師資與課程內容的權利，請隨時注意課程變動的最新消息。</li>
+                    <li>為確保每位學員的權益，請勿隨意移動或是佔用周遭無人使用的席位，造成您的不便敬請見諒。</li>
+                    
+                    
+                  </ul>
+                </div>
+              </div>
+            {/* <img className=" MyTicket_img1 " src="/images/1月有氧課表.png" alt="" /> */}
+          </Col>
 
-        <Col xs={6}>
-          <Card className='position-relative pb-5'>
-              <Card.Header>SHAWN STUDIO</Card.Header>
-              <Card.Body>
+          <Col lg={12} xl={6}>
+            {tickets.map((ticket)=>   {
+                  return <MyTicketItem key={ticket.id} ticket={ticket}/>;
+              })}
+            
+            
+          </Col>
+        </Row>
+      </Container>
+    </div>
 
-                <Card.Title>有氧課程</Card.Title>
-
-                <Card.Text>
-                  With supporting text below as a natural lead-in to additional content.
-                </Card.Text>
-
-                <Button className="w-80 position-absolute mb-md-5 mx-md-3 end-0" variant="primary">立即使用</Button>
-            </Card.Body>
-          </Card>
-        </Col>
-
-
-        
-      </Row>
-      
-
-    </Container>
   )
 }
 
