@@ -12,7 +12,7 @@ const NewsCard = ({title, text, newsImg}) => {
      
 
         <Card className="shadow m-3 cardWidth" >
-          <Card.Img variant="top" src={{newsImg}}/>
+          <Card.Img variant="top" src={newsImg}/>
           <Card.Body>
             <Card.Title>{title}</Card.Title>
             <Card.Text>
