@@ -16,7 +16,7 @@ const news = () => {
               <Carousel.Item interval={2000}>
                 <img
                   className="d-block  Carouselteacherwidth  ms-5 mx-auto"
-                  src={"/images/coach1.png"}
+                  src={"images/coach1.png"}
                   alt="First slide"
                 />
                 <Carousel.Caption>
@@ -27,7 +27,7 @@ const news = () => {
               <Carousel.Item interval={500}>
                 <img
                   className="d-block Carouselteacherwidth  ms-5 mx-auto"
-                  src={"/images/coach2.png"}
+                  src={"images/coach2.png"}
                   alt="Second slide"
                 />
                 <Carousel.Caption>
@@ -38,7 +38,7 @@ const news = () => {
               <Carousel.Item>
                 <img
                   className="d-block Carouselteacherwidth  ms-5 mx-auto"
-                  src={"/images/coach3.png"}
+                  src={"images/coach3.png"}
                   alt="Third slide"
                 />
                 <Carousel.Caption>

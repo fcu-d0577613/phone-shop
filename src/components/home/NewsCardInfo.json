@@ -3,17 +3,17 @@
     "id" : "1",
     "title" : "健身計畫",
     "text" : "健身計劃優惠專案 雙重好禮~~~~",
-    "newsImg" : "/images/1006.png"
+    "newsImg" : "images/1006.png"
   },
   { 
     "id" : "2",
     "title" : "有氧優惠計畫",
     "text" : "有氧優惠計畫開始囉! ",
-    "newsImg" : "/images/1008.png"
+    "newsImg" : "images/1008.png"
   },{ 
     "id" : "3",
     "title" : "聖誕活動",
     "text" : "聖誕節尋寶活動!!",
-    "newsImg" : "/images/5a002f149f7e7-01.png"
+    "newsImg" : "images/5a002f149f7e7-01.png"
   }
 ]
