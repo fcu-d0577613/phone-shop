@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div className='hero mainBG text-light'>
       <div className=" card    border-0">
-        <img src="/images/FCU_GYM.png" className="card-img homeBigImg" alt="..." />
+        <img src="images/FCU_GYM.png" className="card-img homeBigImg" alt="..." />
         
       </div>
       <Video />
