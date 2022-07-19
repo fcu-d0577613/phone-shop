@@ -31,7 +31,7 @@ const news = () => {
           </Col>
           <Col lg={12} xl={6} className='mt-5'>
           <video className='videoWidth'  controls>
-            <source src="/images/0914.mp4" type="video/mp4" />
+            <source src={"/images/0914.mp4"} type="video/mp4" />
 
             Your browser does not support HTML video.
           </video>
