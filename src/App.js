@@ -9,6 +9,7 @@ import TrainList from "./components/trainList/TrainList";
 import Regieter from "./components/member/Register";
 import Login from "./components/member/Login";
 import TodoList from "./components/trainList/TodoList";
+import Cart from "./components/products/Cart";
 
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/" element={ <Home /> } />
           <Route exact path="/products" element={ <Products /> } />
           <Route exact path="/products/:id" element={ <Product /> } />
+          <Route exact path="/cart" element={ <Cart /> } />
           <Route exact path="/myclass" element={ <AbericTable  /> } />
           <Route exact path="/trainMySelf" element={ <TrainList /> } />
           <Route exact path="/myticket" element={ <MyTicket /> } />

@@ -9,10 +9,12 @@ import { faTimes,faBars } from '@fortawesome/free-solid-svg-icons'
 import {Card, Container, Row, Col, Carousel }from 'react-bootstrap';
 
 import "../style/style.css"
+import { useSelector } from 'react-redux';
 
 
 
 function Navbar(props) {
+  const state = useSelector((state) => state.handleCart)
   let {currentUser, setCurrentUser} =props;
   const navigate = useNavigate();
   
@@ -136,6 +138,16 @@ function Navbar(props) {
                   onClick={closeMobileMenu}
                 >
                   登入
+                </Link>
+              </li> 
+
+              <li className='nav-links p-0 my-0 me-1'>
+                <Link
+                  to='/cart'
+                  className='nav-links sbtn text-light '
+                  onClick={closeMobileMenu}
+                >
+                  購物車({state.length})
                 </Link>
               </li> 
 

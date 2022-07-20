@@ -28,11 +28,16 @@ const Product = () => {
     getProduct();
   },[])
 
+  
+//Loading
   const Loading = () => {
     return(
       <h3>Loading......</h3>
     )
   }
+
+
+//Showproduct
   const Showproduct = () => {
     return(
       <div className='mainBG fill-window text-light'>

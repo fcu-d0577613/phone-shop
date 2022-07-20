@@ -1,4 +1,4 @@
-const cart = ["apple"];
+const cart = [];
 
 //action 是 addCart的return
 const handleCart = (state = cart, action) => {
