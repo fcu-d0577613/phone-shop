@@ -17,10 +17,10 @@ const Cart = () => {
             {product.qty} x ${product.price} = ${product.qty * product.price}
           </p>
           <button className='btn btn-outline-dark me-4'
-            onClick={() => handleButton(product)}
+            // onClick={() => handleButton(product)}
           > - </button>
           <button className='btn btn-outline-dark me-4'
-            onClick={() => handleButton(product)}
+            // onClick={() => handleButton(product)}
           > + </button>
         </Col>
       </Row>
