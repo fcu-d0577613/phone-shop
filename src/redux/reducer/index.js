@@ -5,7 +5,7 @@ import TicketList from "./TicketList";
 import { combineReducers } from "redux";
 
 const rootReducers = combineReducers({
-  // handleCart,
+  handleCart,
   userInfo,
   TodoList,
   TicketList,

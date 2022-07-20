@@ -14,7 +14,7 @@ import { useSelector } from 'react-redux';
 
 
 function Navbar(props) {
-  const state = useSelector((state) => state.handleCart)
+  const state = useSelector((state) => state.handleCart);
   let {currentUser, setCurrentUser} =props;
   const navigate = useNavigate();
   
@@ -131,7 +131,7 @@ function Navbar(props) {
                 </Link>
               </li>  
 
-              <li className='nav-links p-0 my-0 me-1'>
+              <li className='nav-links  my-0 me-1'>
                 <Link
                   to='/login'
                   className='nav-links sbtn text-light '
@@ -144,7 +144,7 @@ function Navbar(props) {
               <li className='nav-links p-0 my-0 me-1'>
                 <Link
                   to='/cart'
-                  className='nav-links sbtn text-light '
+                  className='nav-links cartbtn text-light '
                   onClick={closeMobileMenu}
                 >
                   購物車({state.length})

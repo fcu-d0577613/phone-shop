@@ -41,12 +41,12 @@ const Product = () => {
   const Showproduct = () => {
     return(
       <div className='mainBG fill-window text-light'>
-      <div className='container'>
+      <div className='container '>
         <div className='row m-5'>
-          <div className='col-12 col-md-6  '>
+          <div className='col-12 col-lg-6 d-flex justify-content-center  '>
             <img className='productIMGONLY' src={product.image} alt={product.title} />
           </div>
-          <div className='col-md-6'>
+          <div className='col-12 col-lg-6'>
             <h4 className='text-uppercase text-black-50'>{product.category}</h4>
             <h1 className='display-5'>{product.title}</h1>
             <p className='lead fw-bolder'> {product.rating && product.rating.rate}  <i className='fa fa-star'></i></p>
