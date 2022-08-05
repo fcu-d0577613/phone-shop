@@ -16,7 +16,7 @@ const MyTicket = () => {
 
 
   return (
-    <div className='mainBG fill-window'>
+    <div className='mainBG ticket-window'>
 
       <Container>
         <Row className="d-flex  pt-5 text-lg-start text-center">
@@ -36,12 +36,12 @@ const MyTicket = () => {
             {/* <img className=" MyTicket_img1 " src="/images/1月有氧課表.png" alt="" /> */}
           </Col>
 
-          <Col lg={12} xl={6}>
+          <Col lg={12} xl={6} className="">
             {tickets.map((ticket)=>   {
                   return <MyTicketItem key={ticket.id} ticket={ticket}/>;
               })}
             
-            
+            <div></div>
           </Col>
         </Row>
       </Container>
